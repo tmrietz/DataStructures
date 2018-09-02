@@ -2,10 +2,10 @@
 #include <string>
 using namespace std;
 
-template <typename T>
+template <typename nodeType>
 class linkedListNode{
     private:
-        T val;
+        nodeType val;
         linkedListNode* next; 
         linkedListNode* prev;
 
@@ -14,7 +14,7 @@ class linkedListNode{
             val = NULL;
         };
 
-        linkedListNode(T id){
+        linkedListNode(nodeType id){
             val = id;
         }
 
