@@ -1,2 +1,4 @@
 # DataStructures
-Data structure implementations!
+Data structure implementations! An ever-growing list.
+-Dynamic Array
+-Doubly Linked List
