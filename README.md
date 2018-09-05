@@ -4,3 +4,4 @@ Data structure implementations! An ever-growing list.
 - Doubly Linked List
 - Stack:
   - linked list
+  - dynamic array
