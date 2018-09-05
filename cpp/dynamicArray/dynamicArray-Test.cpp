@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 
     int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-    dynamicArray* dynArr = new dynamicArray();
+    dynamicArray<int>* dynArr = new dynamicArray<int>();
     int size, capacity;
     size = dynArr->getSize();
     capacity = dynArr->getCapacity();
@@ -13,7 +13,7 @@ int main(){
     dynArr->printArr();
 
     for(int i=0; i<16; i++){
-        dynArr->dynamicArrayInsert( arr[i] );
+        dynArr->pushBack( arr[i] );
     }
     size = dynArr->getSize();
     capacity = dynArr->getCapacity();
