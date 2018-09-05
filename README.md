@@ -4,7 +4,7 @@
 #### Dynamic Array**
 Insert       | Insert @ pos  | Removal       | Lookup        | Is Empty
 ------------ | ------------- | ------------- | ------------- | -------------
-O(1+) amortized | O(n)       | Theta(1)      | O(lgn)        | O(1)
+O(1+)        | O(n)          | Theta(1)      | O(lgn)        | O(1)
 
 #### Doubly Linked List**
 Insert       | Insert @ pos  | Removal       | Lookup        | Is Empty
