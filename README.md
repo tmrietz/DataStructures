@@ -7,7 +7,6 @@ Data structure implementations! An ever-growing list.
   - lookup: O(lgn)
   - isEmpty: O(1)
 - Doubly Linked List
-  - push back: Theta(1)
   - insert: Theta(1)
   - insert at index: O(n)
   - removal: Theta(1)
