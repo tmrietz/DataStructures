@@ -1,5 +1,6 @@
-#include <string>
-#include <iostream>
+#ifndef DAQUEUE_H
+#define DAQUEUE_H
+
 #include "../dynamicArray/dynamicArray.h"
 using namespace std;
 
@@ -28,13 +29,15 @@ class Queue{
         }
 
         type front(){
-            return arr->getAt(0);
+            return arr->begin();
         }
 
         type back(){
-            return arr->getAt(arr->getSize()-1);
+            return arr->end();
         }
 };
+#endif
+
 
 /*
 int main(){
