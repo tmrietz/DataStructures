@@ -88,6 +88,14 @@ class dynamicArray{
             cout << endl;
         }
 
+        int lookUp(type val){
+            for(int s=0; s<getSize(); s++){
+                if(arr[s] == val)
+                    return s;
+            }
+            return -1;
+        }
+
         ~dynamicArray(){
             delete [] arr;
             arr = nullptr;
