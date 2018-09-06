@@ -18,5 +18,10 @@ Theta(1)     | O(n)          | O(n)          | Theta(1)      | O(n)          | O
 - linked list
 - dynamic array
 
+
 #### - Queue
+- dynamic array
+
+
+#### - Dequeue
 - dynamic array
