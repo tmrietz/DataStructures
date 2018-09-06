@@ -8,17 +8,17 @@ template <typename type>
 class dynamicArray{
     private:
         type* arr;
-        int size, capacity;
+        int right, left, capacity;
 
     public:
         dynamicArray(){
             arr = new type[10];
-            size = 0; capacity = 10;
+            right = 0; left = 0; capacity = 10;
         }
 
         dynamicArray(int cap){
             arr = new type[cap];
-            size = 0; capacity = cap;
+            right = 0; left = 0; capacity = cap;
         }
 
         void pushBack(type val){
@@ -26,7 +26,7 @@ class dynamicArray{
                 resizeArr();
             }
             arr[getSize()] = val;
-            size++;
+            right++;
         }
 
         void pushFront(type val){
@@ -34,20 +34,24 @@ class dynamicArray{
                 resizeArr();
             }
             int itr = getSize()-1;
-            while(itr >= 0){
+            while(itr >= left){
                 arr[itr+1] = arr[itr];
                 itr--;
             }
-            arr[0] = val;
-            size++;
+            arr[left] = val;
+            right++;
         }
 
         void removeBack(){
-            size--;
+            right--;
+        }
+
+        void removeFront(){
+            left++;
         }
 
         int getSize(){
-            return size;
+            return right;
         }
 
         int getCapacity(){
@@ -56,6 +60,14 @@ class dynamicArray{
 
         type getAt(int position){
             return arr[position];
+        }
+
+        type begin(){
+            return getAt(left);
+        }
+
+        type end(){
+            return getAt(right-1);
         }
 
         void setAt(int position, type val){
@@ -82,7 +94,7 @@ class dynamicArray{
         }
 
         void printArr(){
-            for(int j=0; j < getSize(); j++){
+            for(int j=left; j < getSize(); j++){
                 cout << arr[j] << " ";
             }
             cout << endl;
