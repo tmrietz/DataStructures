@@ -7,7 +7,7 @@ using namespace std;
 template <typename type>
 class dynamicArray{
     private:
-        int* arr;
+        type* arr;
         int size, capacity;
 
     public:
@@ -29,8 +29,20 @@ class dynamicArray{
             size++;
         }
 
+        void pushFront(type val){
+            if(getSize() == getCapacity()){
+                resizeArr();
+            }
+            int itr = getSize()-1;
+            while(itr >= 0){
+                arr[itr+1] = arr[itr];
+                itr--;
+            }
+            arr[0] = val;
+            size++;
+        }
+
         void removeBack(){
-            arr[getSize()] = NULL;
             size--;
         }
 
@@ -42,7 +54,7 @@ class dynamicArray{
             return capacity;
         }
 
-        int getAt(int position){
+        type getAt(int position){
             return arr[position];
         }
 
@@ -60,7 +72,7 @@ class dynamicArray{
         }
 
         void resizeArr(){
-            int* tmp = new type[capacity*2];
+            type* tmp = new type[capacity*2];
             for(int s=0; s < getCapacity(); s++){
                 tmp[s] = arr[s];
             }

@@ -41,22 +41,5 @@ class Stack{
         bool isEmpty(){
             return arr->isEmpty();
         }
-
-/*     THIS SHOULD BE BINARY SEARCH
-        bool lookUp(type val){
-            return ll->lookUp(val);
-        }
-*/
 };
 #endif
-
-/*
-int main(){
-    linkedList<string>* ll = new linkedList<string>("test");
-    ll->printList();
-    ll->insertAt("test2",2);
-    ll->printList();
-    delete ll;
-    return 0;
-}
-*/
