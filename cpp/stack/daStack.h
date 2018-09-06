@@ -31,7 +31,7 @@ class Stack{
         }
 
         type top(){
-            return arr[arr->getSize()];
+            return arr->back();
         }
 
         void size(){
